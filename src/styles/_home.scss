@@ -1,0 +1,95 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+.container {
+  padding: 5%;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  p.header {
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 3rem;
+  }
+  .img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    &--item {
+      max-width: 48%;
+      margin: 0 1% 2% 1%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      .content {
+        img {
+          width: 100%;
+          height: auto;
+          transition: all 1s;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+      .title {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+    &--modal {
+      display: none;
+    }
+  }
+  .button {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    .load-more {
+      background-color: aqua;
+      color: black;
+      font-weight: bold;
+      padding: 5px 30px;
+      border-radius: 7px;
+      border: none;
+      font-size: 24px;
+      transition: all 0.5s;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      &:hover,
+      :focus {
+        cursor: pointer;
+        outline: none;
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+@media #{$mq-small} {
+  .container {
+    .img-wrapper {
+      &--item {
+        max-width: 31%;
+      }
+    }
+  }
+}
+
+@media #{$mq-medium} {
+  .container {
+    .img-wrapper {
+      &--item {
+        width: 23%;
+      }
+    }
+  }
+}
